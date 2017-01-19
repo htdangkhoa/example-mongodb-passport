@@ -1,0 +1,24 @@
+{
+  "name": "mg-pp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  	"ejs": "*",
+  	"express": "*",
+  	"express-session": "*",
+  	"body-parser": "*",
+  	"cookie-parser": "*",
+  	"mongoose": "*",  	
+  	"passport": "*",
+  	"passport-local": "*",
+  	"passport-local-mongoose": "*",
+  	"bcrypt-nodejs": "*",
+  	"node-uuid": "*"
+  }
+}
