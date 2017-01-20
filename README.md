@@ -6,6 +6,7 @@ Example source for MongoDB, NodeJS, Express and Passport.
 ### Document for modules
   - [Mongoose](http://mongoosejs.com/docs/2.7.x/index.html).
   - [Passport](http://passportjs.org/docs).
+  - [Bcrypt](https://www.npmjs.com/package/bcrypt-nodejs).
   - [EJS](http://www.embeddedjs.com/).
 
 ### Installation
