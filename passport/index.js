@@ -15,9 +15,13 @@ passport.use(new LocalStrategy({
   		console.log(user);
   		if (!user){
   			return done(null, false);
-  		}else {
-  			return done(null, user);
   		}
+
+      if (!User.bcrypt.compareSync(password, user.password)){
+        return done(null, false);
+      }
+
+      return done(null, user);
   	}, function(error){
   		return done(error);
   	});

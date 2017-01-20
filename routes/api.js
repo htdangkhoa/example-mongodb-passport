@@ -21,7 +21,7 @@ router.post("/signup", function(req, res){
 	var user = new User({
 		_id: uuid.v4(),
 		email: req.body.email,
-		password: req.body.password
+		password: User.bcrypt.hashSync(req.body.password, User.bcrypt.genSaltSync(8), null)
 	});
 
 	user.save(function(err, result){
