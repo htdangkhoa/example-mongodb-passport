@@ -12,16 +12,21 @@ passport.use(new LocalStrategy({
   	User.findOne({
   		email: email
   	}).then(function(user){
-  		console.log(user);
   		if (!user){
   			return done(null, false);
   		}
 
-      if (!User.bcrypt.compareSync(password, user.password)){
-        return done(null, false);
-      }
+      user.comparePassword(password, function(err, isMatch) {
+          if (err) {
+            return done(err);
+          }
 
-      return done(null, user);
+          if (!isMatch) {
+            return done(null, false);
+          }
+
+          return done(null, user)
+      });
   	}, function(error){
   		return done(error);
   	});

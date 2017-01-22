@@ -19,15 +19,17 @@ router.get("/signup", function(req, res){
 //Function sign up.
 router.post("/signup", function(req, res){
 	var user = new User({
-		_id: uuid.v4(),
 		email: req.body.email,
-		password: User.bcrypt.hashSync(req.body.password, User.bcrypt.genSaltSync(8), null)
+		password: req.body.password
 	});
-
+	
 	user.save(function(err, result){
 		if (err){
-			console.log(err);
-			res.send(err);
+			if (err.code == 11000) {
+				res.send("Email already exist.");
+			}
+
+			res.send(err.errmsg);
 		}else {
 			console.log(result);
 			res.redirect("/")

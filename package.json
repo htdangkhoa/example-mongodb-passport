@@ -17,7 +17,6 @@
   	"mongoose": "*",  	
   	"passport": "*",
   	"passport-local": "*",
-  	"bcrypt-nodejs": "*",
-  	"node-uuid": "*"
+  	"bcrypt": "*"
   }
 }
