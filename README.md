@@ -3,6 +3,24 @@
 
 Example source for MongoDB, NodeJS, Express and Passport.
 
+### Structure of project
+```
+|- models/
+|----- user.js
+|- passport/
+|----- index.js
+|- routes/
+|----- api.js
+|- views/
+|----- home.html
+|----- login.html
+|----- profile.html
+|----- signup.html
+|- app.js
+|- config.js
+|- package.json
+```
+
 ### Document for modules
   - [Mongoose](http://mongoosejs.com/docs/2.7.x/index.html).
   - [Passport](http://passportjs.org/docs).
