@@ -1,7 +1,6 @@
 //Declare modules.
 var User = require("../models/user");
 var passport = require("../passport/index").passport;
-var uuid = require("node-uuid");
 var express = require("express");
 var router = express.Router();
 
