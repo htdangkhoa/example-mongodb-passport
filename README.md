@@ -1,4 +1,7 @@
 # Example MongoDB And Passport
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/htdangkhoa/example-mongodb-passport.svg)](https://greenkeeper.io/)
+
 ### Description
 
 Example source for MongoDB, NodeJS, Express and Passport.
